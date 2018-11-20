@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中国货币网--中国外汇交易中心主办</title>
+<meta name="keywords" content="货币市场,债券市场,外汇市场,票据市场,Shibor,人民币汇率中间价"/>
+<meta name="description" content="中国货币网移动版为手机、Pad等移动终端提供货币市场,债券市场,外汇市场,票据市场,Shibor,人民币汇率中间价等行情数据"/>
+<meta name="robots" content="index,flow"/>
+<meta name="googlebot" content="index,flow"/>
+<script language="javascript">
+  var u=navigator.userAgent;
+ u = u.toLowerCase();
+ var browser={versions:function(){
+	 return{
+	 pc: u.indexOf('windows nt') > -1,  
+	 linux: u.indexOf('linux') > -1, 
+	 android:u.indexOf('android')>-1,
+	 Phone:u.indexOf('iphone')>-1||u.indexOf('ipod')>-1||u.indexOf('itouch')>-1||u.indexOf('windows phone') > -1,
+	 iPad :u.indexOf('ipad')>-1};}()
+ };
+ if(browser.versions.Phone){
+	window.location.href = "http://m.chinamoney.com.cn/phone/index.html";
+ }else if(
+	browser.versions.iPad){window.location.href = "http://m.chinamoney.com.cn/pad/index.html";
+}
+ else if (browser.versions.android){
+	var index = u.indexOf("android");
+	var androidVersion = parseFloat(u.slice(index+8)); 
+	if(androidVersion<3){
+		// 版本小于3
+		window.location.href = "http://www.chinamoney.com.cn/index.html";
+	}else{
+		window.location.href = "http://m.chinamoney.com.cn/phone/index.html";
+	}
+ }else if(browser.versions.linux && !browser.versions.android){
+	//跳转到pc
+	 window.location.href = "http://www.chinamoney.com.cn/index.html";
+ }else if(browser.versions.pc){
+	//跳转到pc
+	window.location.href = "http://www.chinamoney.com.cn/index.html";
+ }else{
+	//跳转到pc
+	window.location.href = "http://www.chinamoney.com.cn/index.html";
+ }
+</script>
+</head>
+</html>
