@@ -25,6 +25,7 @@ page_header = u'''
         <meta charset="utf-8">
     </head>
 <body bgcolor="white">
+    <hr>
     <pre>'''
 
 page_content = '''<a href="%s">%s</a>
